@@ -1,0 +1,42 @@
+
+1.wc -l /etc/passwd
+grep "x:100:" /etc/passwd 
+
+2.grep "0:0" /etc/passwd | vi /baitap/dsuser
+grep "0:0" /etc/passwd > baitap/dsuser
+cat baitap/dsuser
+
+3.vi /etc/group
+shift:set nu
+
+4.
+cách 1
+groupadd hocvien && groupadd admin && ..
+useradd -g hocvien hv1
+passwd hv1
+cách 2
+
+5.(id hv1 ; id hv2 ; id hv3 )
+tail
+
+6. usermod -u 0 -o admin1
+usermod -u 0 -o admin2
+
+7.usermod -g admin hv3
+gppasswd -d hv3 hocvien
+
+8. usermod -c "Nguoi dung quan tri hẹ thong" admin1
+tail /etc/passwd
+
+9. th1: nếu group user  là primary group của user1 thì đổi group tức là đổi primary group
+usermod -g hocvien user1
+th2: nếu group user là second group cùa user1 thì đổi group tức là đổi group phụ.
+-gỡ user1 ra khỏi group user (gpasswd)
+-thêm user1 vào group phụ học viên ( usermod -G user user1
+
+10.passwd -l user1
+
+12. cp /etc/passwd /data/dsuser
+
+
+
